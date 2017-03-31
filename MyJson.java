@@ -1,13 +1,6 @@
 package json;
 
 import net.sf.json.JSONObject;
-import net.sf.json.JsonConfig;
-import net.sf.json.util.PropertyFilter;
-
-import javax.swing.*;
-import java.util.HashMap;
-import java.util.Map;
-
 
 /**
  * Created by guft on 2017/3/31.
