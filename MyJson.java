@@ -14,7 +14,7 @@ public class MyJson extends Person {
     //一定要加上默认构造函数，否则JSONObject.toBean时候回出错。
     public MyJson(){
 
-    }
+    };
     public MyJson(String name, int age, int num, String sex){
         this.name = name;
         this.age = age;
@@ -63,8 +63,11 @@ public class MyJson extends Person {
 
     public static void main(String[] args){
         MyJson mj = new MyJson("myjson",28, 1222221, "man");
+        Qr_code_info qr = new Qr_code_info();
+        qr.setauth_code("11223344");
         Msg_Body body = new Msg_Body("T2sss3","10000405","http://shangbin.xinyunzhibo.com/Api/notify/index/");
 
+        body.setQr_code_info(qr);
 
         ConsJson json = new ConsJson();
         String b = json.Object2Json(body);

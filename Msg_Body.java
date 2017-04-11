@@ -5,23 +5,27 @@ package json;
  */
 public class Msg_Body {
 
-    private String code;
+    private String tran_cd;
     private String ins_id_cd;
     private String url;
+    private Qr_code_info qr_code_info;
 
     Msg_Body(){
 
-    }
-    Msg_Body(String code, String ins_id_cd, String url){
-        this.code = code;
+    };
+
+    Msg_Body(String code, String ins_id_cd, String url ){
+        this.tran_cd = code;
         this.ins_id_cd = ins_id_cd;
         this.url = url;
+
     }
-    public String getCode(){
-        return code;
+
+    public String gettran_cd(){
+        return tran_cd;
     }
-    public void setCode(String code){
-        this.code = code;
+    public void settran_cd(String tran_cd){
+        this.tran_cd = tran_cd;
     }
 
     public String getSign() {
@@ -38,5 +42,12 @@ public class Msg_Body {
 
     public void setUrl(String url) {
         this.url = url;
+    }
+
+    public Qr_code_info getQr_code_info(){
+        return qr_code_info;
+    }
+    public void setQr_code_info(Qr_code_info qr_code_info){
+        this.qr_code_info = qr_code_info;
     }
 }
